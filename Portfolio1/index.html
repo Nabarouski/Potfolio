@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+<title>Portfolio</title>
+	<style>
+		@font-face {
+ 		font-family: "Inter bold";
+  		src: url("assets/fonts/static/Inter-Bold.ttf");
+		font-weight: 700;
+		}
+		@font-face {
+ 		font-family: "Inter relugal";
+  		src: url("assets/fonts/static/Inter-Regular.ttf");
+		font-weight: 400;
+		}
+		@font-face {
+ 		font-family: 'MerriweatherSans Bold';
+  		src: url("assets/fonts/static/MerriweatherSans-Bold.ttf");
+		font-weight: 700;
+		}
+		
+	html {scroll-behavior: smooth}
+		
+		.container {
+					max-width: 1440px;
+  					margin: 0 auto;
+  					padding: 0 20px;
+					}
+		
+	.head {position:relative;
+			max-width: 1440px;
+			height:90px;
+			background: url("assets/img/bg.jpg");/*Картинка по background*/
+  			background-repeat: no-repeat;
+ 			background-position: center 0;
+			margin: 0px;
+			padding: 0px}
+		
+		.logo { position: relative;
+				float: left;/*Выровнял по float:left*/
+				width: 50px;
+				height: 50px;
+				margin-left:20px;
+				margin-top:20px;
+				cursor: pointer;
+			background-image: url("assets/svg/logo.svg");/*Картинка по backgroud*/
+  			background-size: contain;
+  			background-repeat: no-repeat;  
+			transition: 0.3s;}
+		.logo:hover { filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);}
+		
+	.nav-list {display: flex;
+				justify-content:flex-end;/*Выровнял по flex-end*/
+				align-items: center;
+				margin-left: auto;
+				margin-top:20px;
+				height: 90px;
+				font-family:'Inter Regular';
+				font-size: 20px;
+				line-height: 50px;
+				color:#ffffff;
+				list-style: none;/*Убрать точки со списка*/
+				cursor: pointer}
+		
+	.nav-link {position: relative;
+				padding: 0 20px;
+		 		line-height: 50px}
+		
+	.anchor {text-decoration: none;
+				 color: #ffffff;
+				 cursor: pointer}
+	.anchor {transition: .3s}
+	.anchor:hover {color:#bdae82}
+		
+		.hero {position: relative;
+				display: flex;
+			   background: url("assets/img/bg.jpg");
+			   background-position: center -90px;
+  			   background-repeat: no-repeat;
+				max-width: 1440px;
+				height: 820px;
+			   }
+		.hero-box { position: relative;
+					width: 500px;
+					height: 330px;
+					left: 80px;
+					top: 160px;
+					}
+	.hero-title {position: relative;
+				font-family:"MerriweatherSans Bold";
+				font-size: 60px;
+				line-height: 120px;
+				color: #ffffff}
+		.hero-text {position: relative;
+					font-family:'Inter Regular';
+					font-size: 20px;
+					line-height: 40px;	
+					color: #ffffff}
+		.btn-hero { position: relative;
+					text-align: center;
+					background-color: #bdae82;
+					width: 220px;
+					height: 55px;
+				    font-family:'Inter Regular';
+					font-size: 20px;
+					line-height: 40px;	
+					color: #000000;
+					cursor: pointer;
+					border: none}
+		.btn-hero:hover {color:#ffffff}
+		
+		.section-title {position: relative;
+						width: auto;
+						height: auto;
+						font-family:'MerriweatherSans Bold';
+						font-size: 40px;
+						line-height: 80px;
+						color:#bdae82;
+						text-align: center;
+						background-color: #000000;
+						cursor: pointer;
+						top: 0px}
+		.section-title:hover {color:#ffffff}
+		.line-title { position: relative;
+					  width: 250px;
+					  height: 2px;
+					  background-color: #bdae82;
+					  margin-left: 20px;
+					  margin-right: 20px;
+					  cursor: pointer;
+					  top: 75px;
+					}
+		.line-title:hover {background-color: #ffffff}
+		.div-title {
+					display: flex;
+					justify-content: center;
+					width: auto;
+					height: auto;
+					background-color: #000000;
+					top: 0;
+					}
+		.skills {position: relative;
+				 width: auto;
+				 height: auto;
+				 background-color: #000000;
+				 }
+		
+	 .skills-items {position: relative;
+					display: flex;
+  					justify-content: space-between;
+  					flex-wrap: wrap;
+					width: 1400px;
+					height: auto;
+					/*border: solid 1px #bdae82;*/
+					}
+		.skill-item {position: relative;
+					 text-align: center;
+					 width: 320px;
+					 height: 240px;
+					 /*border: solid 1px #bdae82;*/
+					 }
+	
+		.skill {position: relative;
+				text-align: center;
+				cursor: pointer}
+		.skill {transition: .3s}
+		.skill:hover {opacity: 0.5}
+		/*.skill:hover{background-color:#ffffff}*/
+		
+		.skills-text1 {position: relative;
+						text-align: center;
+					 	font-family:'Inter Bold';
+						font-size: 20px;
+						line-height: 40px;	
+						color: #ffffff}
+		.skills-text2 {position: relative;
+						text-align: center;
+						font-family:'Inter Regular';
+						font-size: 18px;
+						line-height: 36px;	
+						color: #ffffff}
+		
+	.portfolio {position: relative;
+				 width: auto;
+				 height: auto;
+				 background-color: #000000}
+		
+	.portfolio-text {position: relative;
+					 text-align: center;
+					 font-family:'Inter Regular';
+					 font-size: 20px;
+					 line-height: 40px;	
+					 color: #bdae82}
+		
+  .btn-block-portfolio {display: flex;
+						justify-content: center;
+						flex-wrap: wrap;
+						gap: 5px}
+		
+	.btn-portfolio {position: relative;
+					text-align: center;
+					background-color: #000000;
+					width: 220px;
+					height: 55px;
+				    font-family:'Inter Regular';
+					font-size: 20px;
+					line-height: 40px;	
+					color: #bdae82;
+					cursor: pointer;
+					border: solid 3px #bdae82}
+	.btn-portfolio:hover{color: #ffffff}
+		
+	.photos-block {position: relative;
+				   display: flex;
+				   justify-content: center;
+				   flex-wrap: wrap;
+				   gap: 25px;
+				   top: 60px;
+				   bottom: 100px}
+	
+		.video {position: relative;
+					  width: auto;
+				 	  height: auto;
+					  background-color: #000000;
+					 }
+		
+	 .video-block {position: relative;
+				   display: flex;
+				   justify-content: center;
+				   flex-wrap: wrap;
+				   gap: 25px;
+				   top: 0px;
+				   bottom: 0px;
+				   }
+		.btn-video {position: absolute;
+				 	text-align: center;
+					top: 35%;
+					cursor: pointer}
+		.btn-video:hover {background-color:#bdae82}
+		
+		.price {position: relative;
+				width: auto;
+				height: 845px;
+				background-color: #000000;}
+		
+		.price-block {position: relative;
+					display: flex;
+  					justify-content: center;
+  					flex-wrap: wrap;
+					gap: 10px;
+					width: auto;
+					height: auto;
+					}
+		
+		.price-content {position: relative;
+						text-align: center;
+						width: 450px;
+						height: 505px;
+						top: 20px;
+						padding-top: 40px;
+						border: solid 3px #bdae82;
+						background-color: #000000}
+		
+		.price-main-text {position: relative;
+						  display: block;
+					 	  text-align: center;
+					 	  font-family:'MerriweatherSans Bold';
+					 	  font-size: 28px;
+					      line-height: 56px;	
+					      color: #ffffff}
+		.price-middle-text{position: relative;
+						   display: block;
+					 	  text-align: center;
+					 	  font-family:'MerriweatherSans Bold';
+					 	  font-size: 24px;
+					      line-height: 48px;	
+					      color: #bdae82}
+		.price-little-text{position: relative;
+						  display: block;
+					 	  text-align: center;
+					 	  font-family:'Inter Regular';
+					 	  font-size: 18px;
+					      line-height: 36px;	
+					      color: #ffffff}
+		.btn-price {position: relative;
+					text-align: center;
+					background-color: #bdae82;
+					width: 220px;
+					height: 55px;
+					top: 40px;
+					bottom: 40px;
+				    font-family:'Inter Regular';
+					font-size: 20px;
+					line-height: 40px;	
+					color: #000000;
+					cursor: pointer;
+					border: solid 3px #bdae82}
+		.btn-price:hover{color: #ffffff}
+		
+		
+		.contacts {position: relative;
+					display: flex;
+					justify-content: flex-end;
+					background-image: url("assets/img/contacts.jpg");
+					width: auto;
+					height: 700px;
+					padding: 0 20px;
+ 				   }
+		.contacts-container {position: relative;
+							 width: 450px;
+							 height: 455px;
+							 }
+		.contacts-main-text {position: relative;
+							 font-family: "MerriweatherSans Bold";
+							 font-size: 40px;
+							 line-height: 80px;
+							 color: #bdae82}
+		
+		.mail, .phone {position: relative;
+			   width: 440px;
+				height: 50px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				color: #bdae82;
+				font-family:'Inter Regular';
+				font-size: 20px;
+				line-height: 40px;
+				background-color: transparent;
+				border: solid 3px #bdae82}
+		
+		.message {position: relative;
+			   	width: 440px;
+				height: 100px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				color: #bdae82;
+				font-family:'Inter Regular';
+				font-size: 20px;
+				line-height: 40px;
+				background-color: transparent;
+				border: solid 3px #bdae82}
+		
+	 .btn-contacts {position: relative;
+					text-align: center;
+					background-color: #bdae82;
+					width: 220px;
+					height: 55px;
+		 			top: 25px;
+				    font-family:'Inter Regular';
+					font-size: 20px;
+					line-height: 40px;	
+					color: #000000;
+					cursor: pointer;
+					border: solid 3px #bdae82}
+		.btn-contacts:hover{color: #ffffff}
+		
+		.footer {position: relative;
+				 display: flex;
+				 justify-content: space-between;
+				 align-items: center;
+				 padding: 0 20px;
+				 width: auto;
+				 height: 150px;
+				 background-color: #000000;
+				 font-family:"Inter Regular";
+				 font-size: 20px;
+				 line-height: 50px;
+				 color: #ffffff}
+		.foot-gap {padding-left: 10px;
+				   padding-right: 10px;}
+		.social {cursor:pointer}
+		.social {transition: .3s}
+		.social:hover{opacity: 0.5}
+	</style>
+</head>
+
+<body>
+  <div class="container">
+	<header class="head">
+		<p class="logo"></p>
+		<nav>	
+	<ul class="nav-list">
+		<li class="nav-link"><a href="#skills" class="anchor">Skills</a></li> 
+		<li class="nav-link"><a href="#portfolio" class="anchor">Portfolio</a></li>
+		<li class="nav-link"><a href="#video" class="anchor">Video</a></li>
+		<li class="nav-link"><a href="#price" class="anchor">Price</a></li>
+		<li class="nav-link"><a href="#contacts" class="anchor">Contacts</a></li>
+		<li class="nav-link">en &sol; ru</li></ul>
+		</nav>
+		
+	</header>
+  </div>
+	
+<main>
+	<div class="container">
+	<section class="hero">
+		<div class="hero-box">
+			<h1 class="hero-title">Alexa Rise</h1>
+			<p class="hero-text">Save sincere emotions, romantic feelings and <br> happy moments of life together with professional <br> photographer Alexa Rise</p>
+			<button class="btn-hero">Hire me</button>
+		</div>
+	</section>
+		
+<a id="skills"></a>
+	<section class="skills">
+	<div class="div-title">
+		<span class="line-title"></span>
+		<span><h2 class="section-title">Skills</h2></span>
+		<span class="line-title"></span>
+	</div>
+		
+	<div class="skills-items">
+		<div class="skill-item">
+		<p><img src="assets/svg/camera1.svg" alt="camera" class="skill"></p>
+		<p class="skills-text1">Digital photography</p>
+		<p class="skills-text2">Hight-quality photos in the studio <br> and on the nature</p>
+		</div>
+	<div class="skill-item">
+		<p><img src="assets/svg/video_one.svg" alt="video" class="skill"></p>
+		<p class="skills-text1">Video shooting</p>
+		<p class="skills-text2">Capture your moments so that they always stay with you</p>
+	</div>
+		<div class="skill-item">
+			<p><img src="assets/svg/image1.svg" alt="retouch" class="skill"></p>
+			<p class="skills-text1">Retouch</p>
+			<p class="skills-text2">I strive to make photography surpass reality</p>
+		</div>
+		<div class="skill-item">
+			<p><img src="assets/svg/mic1.svg" alt="audio" class="skill"></p>
+			<p class="skills-text1">Audio</p>
+			<p class="skills-text2">Professional sounds recording for video, advertising, portfolio</p>
+		</div>
+		
+	</div>  
+	</section>
+	
+<a id="portfolio"></a>
+	<section class="portfolio">
+		<div class="div-title">
+		<span class="line-title"></span>
+		<span><h2 class="section-title">Portfolio</h2></span>
+		<span class="line-title"></span>
+		</div>
+	<div class="btn-block-portfolio">
+		<span><button class="btn-portfolio">Winter</button></span>
+		<span><button class="btn-portfolio">Spring</button></span>
+		<span><button class="btn-portfolio">Summer</button></span>
+		<span><button class="btn-portfolio">Autumn</button></span>
+	</div>
+		<div class="photos-block">
+			<span><img src="assets/img/portfolio-img1.jpg" alt="img1"></span>
+			<span><img src="assets/img/portfolio-img2.jpg" alt="img2"></span>
+			<span><img src="assets/img/portfolio-img3.jpg" alt="img3"></span>
+			<span><img src="assets/img/portfolio-img4.jpg" alt="img4"></span>
+			<span><img src="assets/img/portfolio-img5.jpg" alt="img5"></span>
+			<span><img src="assets/img/portfolio-img6.jpg" alt="img6"></span>
+		</div>	
+	</section>
+	
+	<a id="video"></a>
+		<section class="video">
+			<div class="div-title">
+			<span class="line-title"></span>
+			<span><h2 class="section-title">Video</h2></span>
+			<span class="line-title"></span>
+			</div>
+		<div class="video-block">
+			<img src="assets/img/video-player.jpg" alt="Video Player">
+			<p class="btn-video"><img src="assets/svg/Play_hover.svg" alt="Play" class="btn-video"></p>
+		</div>
+		</section>
+	
+	<a id="price"></a>
+	<section class="price">
+		<div class="div-title">
+		<span class="line-title"></span>
+		<span><h2 class="section-title">Price</h2></span>
+		<span class="line-title"></span>
+		</div>
+		
+	<div class="price-block">
+	<div class="price-content">
+		<span class="price-main-text">Standard</span>
+		<span class="price-middle-text">500$</span>
+		<span class="price-little-text">One location <br> 120 photos in color <br> 12 photos in retouch <br> Readiness 2-3 weeks <br> Make up, visage</span>
+		<button class="btn-price">Order shooting</button>
+	</div>
+		<div class="price-content">
+			<span class="price-main-text">Premium</span>
+			<span class="price-middle-text">700$</span>
+			<span class="price-little-text">One or two locations <br> 200 photos in color <br> 20 photos in retouch <br> Readiness 1-2 weeks <br> Make up, visage</span>
+			<button class="btn-price">Order shooting</button>
+		</div>
+	<div class="price-content">
+		<span class="price-main-text">Gold</span>
+		<span class="price-middle-text">1000$</span>
+		<span class="price-little-text">Three locations or more <br> 300 photos in color <br> 50 photos in retouch <br>
+		Readiness 1 week <br> Make up, visage, hairstyle</span>
+		<button class="btn-price">Order shooting</button>
+	</div>
+		
+	</div>
+	</section>
+	
+<a id="contacts"></a>
+	<section class="contacts">
+		<!--<div><img src="assets/img/contacts.jpg" alt="contacts">-->
+		<div class="contacts-container">
+			<h3 class="contacts-main-text">Contact me</h3>
+			<form><textarea class="mail">E-mail</textarea></form>
+			<form><textarea class="phone">Phone</textarea></form>
+			<form><textarea class="message">Message</textarea></form>
+			<button class="btn-contacts">Send message</button>
+		</div>
+	</section>
+	</div>
+</main>
+	<div class="container">
+	<footer class="footer">
+	<div><span class="foot-gap">&copy;</span><span class="foot-gap">2022</span><span class="foot-gap">github</span></div>
+		<div><span>Rolling Scopes School</span></div>
+		<div><span class="foot-gap"><img src="assets/svg/Vector1.svg" alt="instagram" class="social"></span>
+		<span class="foot-gap"><img src="assets/svg/Vector2.svg" alt="facebook" class="social"></span>
+		<span class="foot-gap"><img src="assets/svg/Vector3.svg" alt="twitter" class="social"></span>
+		<span class="foot-gap"><img src="assets/svg/Vector4.svg" alt="pinterest" class="social"></span></div>	
+	</footer>
+	</div>
+</body>
+</html>
